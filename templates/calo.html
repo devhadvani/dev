@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<div class="login">
+	
+    <!-- Get input for predict the cancer -->
+    <center>
+    <form action="{{ url_for('predict')}}"method="post">
+        <h1>Enter the value of tumor features >>></h1>
+        
+    	<input type="text" name="Age" placeholder="Age" required="required" />
+        <input type="text" name="Height" placeholder="Height" required="required" />
+		<input type="text" name="Weight" placeholder="Weight" required="required" />
+		<input type="text" name="Duration" placeholder="Duraion" required="required" />
+        <input type="text" name="Heart_Rate" placeholder="Heart_Rate" required="required" />
+		<input type="text" name="Body_Temp" placeholder="Body_Temp" required="required" />
+		<br>
+    	<input type="text" name="male" placeholder="male" required="required" />
+        
+        
+        
+            <button type="submit" class="btn btn-primary btn-block btn-large"><strong>Predict Cancer</strong></button></a>
+        </div>
+        
+    </form>
+    </center>
+   
+   <!-- Show predicted output using ML model --> 
+   <div>
+       <center>
+   <h1>{{ prediction_text }}</h1>
+       </center>
+   </div>
+
+ </div>
+</body>
+</html>

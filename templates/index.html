@@ -1,0 +1,40 @@
+<html>
+<head>
+    <title>
+        smp
+    </title>
+</head>
+<body>
+
+
+   <div class="login">
+
+    <!-- Form Get input to predict Marks-->
+    <center>
+    <form action="{{ url_for('predict')}}"method="post">
+        <h1>*** Enter Your Study Hours to Predict Marks ***</h1>
+
+    	<input align="center" type="number" name="study_hours" placeholder="study hours" required="required" width="48" height="10"/>
+    	<br>
+
+        <br>
+
+        <!-- Show button -->
+        <div class="button_cont" align="center"><a class="button_css" href="http://bit.ly/breast-cancer-ml-project" target="_blank" rel="nofollow noopener">
+            <button type="submit" class="btn btn-primary btn-block btn-large"><strong>Predict Marks</strong></button></a>
+        </div>
+
+    </form>
+    </center>
+
+   <!-- Show predicted output using ML model -->
+   <div>
+       <center>
+   <h2>{{ prediction_text }}</h2>
+       </center>
+   </div>
+
+ </div>
+
+</body>
+</html>
